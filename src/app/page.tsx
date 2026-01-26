@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
 export default function HomePage() {
-  const featured = projects.filter((p) => p.featured).slice(0, 3);
+  const recent = projects.slice(0, 3);
 
   return (
     <main className="min-h-screen bg-zinc-50">
@@ -55,10 +55,10 @@ export default function HomePage() {
         </Container>
       </header>
 
-      {/* FEATURED PROJECTS */}
-      <Section title="Featured builds" eyebrow="Selected work">
+      {/* RECENT PROJECTS */}
+      <Section title="Recent builds" eyebrow="Latest work">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {featured.map((p) => (
+          {recent.map((p) => (
             <ProjectCard key={p.slug} project={p} />
           ))}
         </div>

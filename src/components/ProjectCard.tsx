@@ -40,24 +40,27 @@ export function ProjectCard({ project }: { project: Project }) {
 
       <div className="mt-5 flex items-center gap-3 text-sm">
         <Link
-            href={`/projects/${project.slug}`}
-            className="font-medium text-indigo-700 underline-offset-4 hover:underline"
+          href={`/projects/${project.slug}`}
+          className="font-medium text-indigo-700 underline-offset-4 hover:underline"
         >
-            Read the build notes →
+          Read the build notes →
         </Link>
 
-        {project.links.map((link) => (
+        {project.links
+          .filter((l) => l.label === "GitHub" || l.label === "Live")
+          .map((l) => (
             <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noreferrer"
-            className="text-zinc-600 underline-offset-4 hover:underline"
+              key={l.label}
+              href={l.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-zinc-600 underline-offset-4 hover:underline"
             >
-            {link.label}
+              {l.label}
             </a>
-        ))}
-        </div>
+          ))}
+      </div>
+
 
     </div>
   );

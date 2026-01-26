@@ -16,6 +16,8 @@ export default function ProjectDetailPage({
   const project = projectBySlug(params.slug);
   if (!project) return notFound();
 
+  const year = project.meta?.date ? new Date(project.meta.date).getFullYear() : null;
+
   return (
     <main className="min-h-screen bg-zinc-50">
       {/* Header / Hero */}
@@ -35,11 +37,12 @@ export default function ProjectDetailPage({
                 ← Back to Projects
               </Link>
 
-              {project.meta?.year ? (
+              {year ? (
                 <span className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-100">
-                  {project.meta.year}
+                  {year}
                 </span>
               ) : null}
+
             </div>
 
             <h1 className="mt-5 text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
