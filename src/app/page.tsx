@@ -4,6 +4,22 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { Section } from "@/components/Section";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import { LogoLoop } from "@/components/LogoLoop";
+
+
+const techLogos = [
+  { src: "/logos/react.png", alt: "React" },
+  { src: "/logos/nextjs.png", alt: "Next.js" },
+  { src: "/logos/typescript.png", alt: "TypeScript" },
+  { src: "/logos/nodejs.png", alt: "Node.js" },
+  { src: "/logos/mongodb.png", alt: "MongoDB" },
+  { src: "/logos/tailwind.png", alt: "Tailwind CSS" },
+  { src: "/logos/docker.png", alt: "Docker" },
+  { src: "/logos/azure.png", alt: "Azure" },
+  { src: "/logos/github.png", alt: "GitHub" },
+  { src: "/logos/vscode.png", alt: "VS Code" },
+];
+
 
 export default function HomePage() {
   const recent = projects.slice(0, 3);
@@ -92,6 +108,18 @@ export default function HomePage() {
           />
         </div>
       </Section>
+
+      {/* TECH LOGO LOOP */}
+      <section className="py-14">
+        <Container>
+          <LogoLoop
+            logos={techLogos}
+            speed={0.5}
+            gap={50}
+            className="opacity-90"
+          />
+        </Container>
+      </section>
 
       {/* ENGINEERING VALUES */}
       <Section title="How I think when I build" eyebrow="Engineering values">

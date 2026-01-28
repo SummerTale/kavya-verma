@@ -21,9 +21,9 @@ export function Header() {
           {/* Logo / Name */}
           <Link
             href="/"
-            className="text-sm font-semibold tracking-tight text-zinc-900"
+            className="text-xl font-semibold tracking-tight text-zinc-900"
           >
-            Kavya Verma
+            KV
           </Link>
 
           {/* Nav */}

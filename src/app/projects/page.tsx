@@ -17,7 +17,7 @@ export default function ProjectsPage() {
               Projects
             </h1>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-700">
-              A collection of projects I’ve built across the stack — each one has
+              A collection of projects I have built across the stack — each one has
               a short write-up and a GitHub link.
             </p>
           </div>

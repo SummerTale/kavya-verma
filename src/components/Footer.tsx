@@ -9,9 +9,12 @@ export function Footer() {
         <div className="flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
           {/* Left */}
           <div className="space-y-1">
-            <p className="text-sm font-medium text-zinc-900">
+            <Link
+              href="/"
+              className="text-sm font-semibold tracking-tight text-zinc-900"
+            >
               Kavya Verma
-            </p>
+            </Link>
             <p className="text-sm text-zinc-600">
               Full-stack developer • Security-minded • Builds that ship
             </p>
@@ -19,12 +22,6 @@ export function Footer() {
 
           {/* Center (optional quick nav) */}
           <nav className="flex flex-wrap gap-4 text-sm">
-            <Link
-              href="/"
-              className="text-zinc-600 underline-offset-4 hover:text-zinc-900 hover:underline"
-            >
-              Home
-            </Link>
             <Link
               href="/projects"
               className="text-zinc-600 underline-offset-4 hover:text-zinc-900 hover:underline"
@@ -49,7 +46,7 @@ export function Footer() {
           <div className="flex gap-4 text-sm">
             {/* Replace with your real links */}
             <a
-              href="https://github.com/"
+              href="https://github.com/SummerTale/"
               target="_blank"
               rel="noreferrer"
               className="text-zinc-600 underline-offset-4 hover:text-zinc-900 hover:underline"
@@ -57,7 +54,7 @@ export function Footer() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/kavya-verma-bu/"
               target="_blank"
               rel="noreferrer"
               className="text-zinc-600 underline-offset-4 hover:text-zinc-900 hover:underline"
@@ -67,7 +64,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-100 py-4 text-xs text-zinc-500">
+        <div className="text-center border-t border-zinc-100 py-4 text-xs text-zinc-500">
           © {new Date().getFullYear()} Kavya Verma. All rights reserved.
         </div>
       </Container>

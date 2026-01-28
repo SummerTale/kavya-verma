@@ -15,12 +15,8 @@ export function ProjectCard({ project }: { project: Project }) {
               {project.title}
             </Link>
           </h3>
-          <p className="mt-1 text-sm text-zinc-600">{project.tagline}</p>
+          <p className="mt-1 text-xs text-zinc-600">{project.tagline}</p>
         </div>
-
-        <span className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-100">
-          Case study
-        </span>
       </div>
 
       <p className="mt-4 text-sm leading-relaxed text-zinc-700">
