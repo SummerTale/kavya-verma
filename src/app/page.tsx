@@ -114,7 +114,7 @@ export default function HomePage() {
         <Container>
           <LogoLoop
             logos={techLogos}
-            speed={0.5}
+            speed={25}
             gap={50}
             className="opacity-90"
           />
