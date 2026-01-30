@@ -229,7 +229,7 @@ const allProjects: Project[] = [
       date: "2025-04-17",
       role: "Full-stack Developer",
       team: "Solo",
-      context: "CS391 mini project",
+      context: "Class project",
     },
     tech: ["Next.js", "TypeScript", "MongoDB", "Validation"],
     stack: {
@@ -275,7 +275,7 @@ const allProjects: Project[] = [
     title: "GhostWriter",
     tagline: "Security research & red team tool using encrypted video capture.",
     description:
-      "Hardware–software senior design project: camera device captures keystroke video, encrypts/transmits it, and analysis software infers keys as a side-channel test.",
+      "Hardware-software senior design project: camera device captures keystroke video, encrypts/transmits it, and analysis software infers keys as a side-channel test.",
     overview:
       "GhostWriter was a senior design hardware–software project built to support red team security testing. A camera-based device captures video, encrypts it, transmits it to a controlled analysis environment, and the software pipeline reconstructs keystrokes from visual input as a side-channel demonstration.",
     meta: {
@@ -629,8 +629,8 @@ const allProjects: Project[] = [
     overview:
       "A team project built using Scrum practices from planning to delivery. Emphasized user stories, acceptance criteria, sprint focus, and feedback loops to ship consistent increments.",
     meta: {
-      date: "2024-??-??",
-      role: "Team member",
+      date: "2025-08-03",
+      role: "Front-end Developer",
       team: "Team",
       context: "CS634 Agile Software Development",
     },
@@ -663,4 +663,7 @@ export const projects: Project[] = [...allProjects].sort(
   (a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime()
 );
 
-export const projectBySlug = (slug: string) => projects.find((p) => p.slug === slug);
+export const projectBySlug = (slug: string) => {
+  const normalized = decodeURIComponent(slug).trim().toLowerCase();
+  return projects.find((p) => p.slug.trim().toLowerCase() === normalized);
+};

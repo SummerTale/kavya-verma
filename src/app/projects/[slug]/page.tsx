@@ -8,12 +8,14 @@ export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
 }
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const project = projectBySlug(params.slug);
+  const { slug } = await params;
+
+  const project = projectBySlug(slug);
   if (!project) return notFound();
 
   const year = project.meta?.date ? new Date(project.meta.date).getFullYear() : null;
