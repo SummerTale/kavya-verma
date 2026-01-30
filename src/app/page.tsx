@@ -55,7 +55,7 @@ export default function HomePage() {
               </ButtonLink>
               {/* Replace href with your resume file path once you add it */}
               <a
-                href="/resume.pdf"
+                href="/KavyaVerma-Resume.pdf"
                 className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-zinc-700 underline-offset-4 hover:underline"
               >
                 Download Resume
