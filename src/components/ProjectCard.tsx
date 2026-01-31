@@ -1,7 +1,6 @@
 // components/ProjectCard.tsx
 import Link from "next/link";
 import type { Project } from "@/data/projects";
-import StarBorder from "@/components/StarBorder";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
