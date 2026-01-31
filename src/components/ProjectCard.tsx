@@ -1,10 +1,11 @@
 // components/ProjectCard.tsx
 import Link from "next/link";
 import type { Project } from "@/data/projects";
+import StarBorder from "@/components/StarBorder";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:shadow-md hover:ring-1 hover:ring-indigo-200">
+    <div className="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold tracking-tight text-zinc-900">

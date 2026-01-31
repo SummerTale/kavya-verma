@@ -24,9 +24,8 @@ export default async function ProjectDetailPage({
     <main className="min-h-screen bg-zinc-50">
       {/* Header / Hero */}
       <header className="relative overflow-hidden border-b border-zinc-200/70 bg-white">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-24 right-[-120px] h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl" />
-          <div className="absolute -bottom-24 left-[-120px] h-72 w-72 rounded-full bg-sky-200/40 blur-3xl" />
+        <div className="absolute inset-0">
+          <div className="absolute -top-24 right-[-120px] h-72 w-72 rounded-full bg-gray-300 blur-3xl" />
         </div>
 
         <Container>

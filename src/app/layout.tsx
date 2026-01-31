@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import {Footer} from "@/components/Footer";
+import ClickSpark from "@/components/ClickSpark";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-zinc-50 text-zinc-900 antialiased">
-        <Header />
-        {children}
-        <Footer />
+        <ClickSpark
+          sparkColor="#000000"
+          sparkSize={12}
+          sparkCount={8}
+          duration={400}
+        >
+          <Header />
+            {children}
+          <Footer />
+        </ClickSpark>
       </body>
     </html>
   );

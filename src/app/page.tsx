@@ -8,16 +8,24 @@ import { LogoLoop } from "@/components/LogoLoop";
 
 
 const techLogos = [
+  { src: "/logos/azure.png", alt: "Azure" },
   { src: "/logos/react.png", alt: "React" },
-  { src: "/logos/nextjs.png", alt: "Next.js" },
-  { src: "/logos/typescript.png", alt: "TypeScript" },
+  { src: "/logos/next.png", alt: "Next.js" },
+  { src: "/logos/ts.png", alt: "TypeScript" },
   { src: "/logos/nodejs.png", alt: "Node.js" },
   { src: "/logos/mongodb.png", alt: "MongoDB" },
+  { src: "/logos/js.png", alt: "JavaScript" },
   { src: "/logos/tailwind.png", alt: "Tailwind CSS" },
   { src: "/logos/docker.png", alt: "Docker" },
-  { src: "/logos/azure.png", alt: "Azure" },
-  { src: "/logos/github.png", alt: "GitHub" },
-  { src: "/logos/vscode.png", alt: "VS Code" },
+  { src: "/logos/github.svg", alt: "GitHub" },
+  { src: "/logos/visual.jpeg", alt: "VS Code" },
+  { src: "/logos/cpp.png", alt: "C++" },
+  { src: "/logos/python.png", alt: "Python" },
+  { src: "/logos/php.png", alt: "PHP" },
+  { src: "/logos/css.png", alt: "CSS" },
+  { src: "/logos/html.png", alt: "HTML" },
+  { src: "/logos/wordpress.png", alt: "Wordpress" },
+  { src: "/logos/wix.png", alt: "Wix" },
 ];
 
 
@@ -28,6 +36,7 @@ export default function HomePage() {
     <main className="min-h-screen bg-zinc-50">
       {/* HERO */}
       <header className="relative overflow-hidden border-b border-zinc-200/70 bg-white">
+      <div className="absolute -top-24 right-[-90px] h-72 w-72 rounded-full bg-gray-300 blur-3xl" />
         <Container>
           <div className="py-14 sm:py-20">
             <p className="text-sm font-medium text-zinc-500">
@@ -35,9 +44,13 @@ export default function HomePage() {
             </p>
 
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
-              Hi, I am Kavya — I build clean web products that hold up under real
-              users.
+              Hi, I am Kavya Verma!
             </h1>
+
+            <h2 className="mt-4 max-w-3xl text-3xl font-medium tracking-tight text-zinc-900 sm:text-4xl">
+              I build clean web products that hold up under real
+              users.
+            </h2>
 
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-zinc-700">
               I like turning messy requirements into crisp interfaces, reliable
@@ -53,7 +66,6 @@ export default function HomePage() {
               <ButtonLink href="/contact" variant="secondary">
                 Contact
               </ButtonLink>
-              {/* Replace href with your resume file path once you add it */}
               <a
                 href="/KavyaVerma-Resume.pdf"
                 className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium text-zinc-700 underline-offset-4 hover:underline"
@@ -148,8 +160,8 @@ export default function HomePage() {
                 Want to build something solid?
               </h2>
               <p className="mt-2 text-zinc-700">
-                I’m open to early-career software engineering roles and
-                full-stack projects.
+                I am open to early-career software engineering and
+                full-stack developer roles and projects.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
